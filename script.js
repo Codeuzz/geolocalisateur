@@ -13,8 +13,7 @@ const findHuman = (event) => {
         .then(res => res.json())
         .then(data => {
             resultParagraph.textContent = `
-            Adresse : ${data.features[0].properties.name}, Code Postal : ${data.features[0].properties.postcode}`
-            console.log(data)
+            Adresse : ${data.features[0].properties.label}`
         
         })
     }, (error) => {
